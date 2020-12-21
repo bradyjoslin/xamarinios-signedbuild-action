@@ -59,12 +59,12 @@ security list-keychain -d user -s "$KEYCHAIN_PATH"
 
 # Build iOS
 cd "$PRJ_DIR" || exit 1
-ls
-# CSPROJ_DIR=$(dirname "$CSPROJ_PATH")
-# CSPROJ_FILENAME=$(basename "$CSPROJ_PATH")
 
-# cd "$CSPROJ_DIR" && cd ../ || exit 1
-# nuget restore
+CSPROJ_DIR=$(dirname "$CSPROJ_PATH")
+CSPROJ_FILENAME=$(basename "$CSPROJ_PATH")
+
+cd "$CSPROJ_DIR" && cd ../ || exit 1
+nuget restore
 
 # if [ -z "$CONFIGURATION" ]
 # then
