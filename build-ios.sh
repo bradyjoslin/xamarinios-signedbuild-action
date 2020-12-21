@@ -1,5 +1,3 @@
-#!/bin/bash
-
 ls -a
 
 # set -e
