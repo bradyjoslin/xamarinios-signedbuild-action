@@ -33,3 +33,12 @@ runs:
   steps:
     - run: ./scripts/build-ios.sh
       shell: bash
+      env:
+          CSPROJ_PATH: ${{ inputs.csproj_path }}
+          MOBILEPROVISION: ${{ inputs.mobileprovision }}
+          CERT_P12: ${{ inputs.cert_p12 }}
+          P12_PASS: ${{ inputs.p12_pass }}
+          KEYCHAIN_PASS: ${{ inputs.keychain_pass }}
+          CONFIGURATION: ${{ inputs.configuration }}
+          MONO_VERSION: ${{ inputs.mono_version }}
+          XAMARIN_IOS_VERSION: ${{ inputs.xamarin_ios_version }}
