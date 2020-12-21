@@ -1,8 +1,10 @@
 #!/bin/bash
 
-set -e
+ls -a
 
-PRJ_DIR=$(pwd)
+# set -e
+
+# PRJ_DIR=$(pwd)
 
 # Regenerate the mobileprovision from base64
 # cd "$RUNNER_TEMP" || exit 1
@@ -58,8 +60,8 @@ PRJ_DIR=$(pwd)
 # fi
 
 # Build iOS
-cd "$PRJ_DIR" || exit 1
-ls -a
+# cd "$PRJ_DIR" || exit 1
+# ls -a
 
 # CSPROJ_DIR=$(dirname "$CSPROJ_PATH")
 # CSPROJ_FILENAME=$(basename "$CSPROJ_PATH")
