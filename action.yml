@@ -31,7 +31,7 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - run: ./build-ios.sh
+    - run: ${{ github.action_path }}/build-ios.sh
       shell: bash
       env:
           CSPROJ_PATH: ${{ inputs.csproj_path }}
