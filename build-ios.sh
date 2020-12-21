@@ -2,6 +2,8 @@
 
 set -e
 
+pwd
+
 # Regenerate the mobileprovision from base64
 cd "$RUNNER_TEMP" || exit 1
 echo -n "$MOBILEPROVISION" | base64 --decode --output CI.mobileprovision
