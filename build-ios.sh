@@ -58,13 +58,14 @@ PRJ_DIR=$(pwd)
 # fi
 
 # Build iOS
-# cd "$PRJ_DIR" || exit 1
+cd "$PRJ_DIR" || exit 1
+ls -a
 
-CSPROJ_DIR=$(dirname "$CSPROJ_PATH")
-CSPROJ_FILENAME=$(basename "$CSPROJ_PATH")
+# CSPROJ_DIR=$(dirname "$CSPROJ_PATH")
+# CSPROJ_FILENAME=$(basename "$CSPROJ_PATH")
 
-cd "$CSPROJ_DIR" && cd ../ || exit 1
-nuget restore
+# cd "$CSPROJ_DIR" && cd ../ || exit 1
+# nuget restore
 
 # if [ -z "$CONFIGURATION" ]
 # then
