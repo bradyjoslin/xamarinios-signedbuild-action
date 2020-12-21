@@ -2,34 +2,34 @@ name: 'Xamarin.iOS Signed Build'
 description: 'Build and Sign Xamarin.iOS Project'
 inputs:
   csproj_path:
-    description: 'Path to csproj file`
+    description: 'Path to csproj file'
     required: true
   mobileprovision:
-    description: `Base64 representation of your mobile provisioning file`
+    description: 'Base64 representation of your mobile provisioning file'
     required: true
   cert_p12:
-    description: `Base64 representation p12 distribution cert`
+    description: 'Base64 representation p12 distribution cert'
     required: true
   p12_pass:
-    description: `Password used when exporting p12 distribution cert from keychain`
+    description: 'Password used when exporting p12 distribution cert from keychain'
     required: true
   keychain_pass:
-    description: `Generate a random password used to create a keychain on the runner`
+    description: 'Generate a random password used to create a keychain on the runner'
     required: true
   configuration:
     description: 'Build configuration'
     required: false
-    default: `Release`
+    default: 'Release'
   mono_version:
-    description: `Version of mono to use for build`
+    description: 'Version of mono to use for build'
     required: false
     default: 'stable'
   xamarin_ios_version:
-    description: `Version of Xamarin.iOS to use for build`
+    description: 'Version of Xamarin.iOS to use for build'
     required: false
     default: 'stable'
 runs:
-  using: "composite"
+  using: 'composite'
   steps:
     - run: ./scripts/build-ios.sh
       shell: bash
