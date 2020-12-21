@@ -29,10 +29,9 @@ inputs:
     required: false
     default: 'stable'
 runs:
-  using: 'composite'
+  using: "composite"
   steps:
     - run: ${{ github.action_path }}/build-ios.sh
-      shell: bash
       env:
           CSPROJ_PATH: ${{ inputs.csproj_path }}
           MOBILEPROVISION: ${{ inputs.mobileprovision }}
@@ -42,3 +41,4 @@ runs:
           CONFIGURATION: ${{ inputs.configuration }}
           MONO_VERSION: ${{ inputs.mono_version }}
           XAMARIN_IOS_VERSION: ${{ inputs.xamarin_ios_version }}
+      shell: bash
