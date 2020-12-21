@@ -5,19 +5,19 @@ set -e
 PRJ_DIR=$(pwd)
 
 # Regenerate the mobileprovision from base64
-cd "$RUNNER_TEMP" || exit 1
-echo -n "$MOBILEPROVISION" | base64 --decode --output CI.mobileprovision
-mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
-cp CI.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles
+# cd "$RUNNER_TEMP" || exit 1
+# echo -n "$MOBILEPROVISION" | base64 --decode --output CI.mobileprovision
+# mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+# cp CI.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles
 
-# Regenerate the p12 from base64 and install in new temp keychain
-KEYCHAIN_PATH=$RUNNER_TEMP/temp
-echo -n "$CERT_P12" | base64 --decode --output cicert.p12
-security create-keychain -p "$KEYCHAIN_PASS" "$KEYCHAIN_PATH"
-security set-keychain-settings -lut 21600 "$KEYCHAIN_PATH"
-security unlock-keychain -p "$KEYCHAIN_PASS" "$KEYCHAIN_PATH"
-security import cicert.p12 -P "$P12_PASS" -A -t cert -f pkcs12 -k "$KEYCHAIN_PATH"
-security list-keychain -d user -s "$KEYCHAIN_PATH"
+# # Regenerate the p12 from base64 and install in new temp keychain
+# KEYCHAIN_PATH=$RUNNER_TEMP/temp
+# echo -n "$CERT_P12" | base64 --decode --output cicert.p12
+# security create-keychain -p "$KEYCHAIN_PASS" "$KEYCHAIN_PATH"
+# security set-keychain-settings -lut 21600 "$KEYCHAIN_PATH"
+# security unlock-keychain -p "$KEYCHAIN_PASS" "$KEYCHAIN_PATH"
+# security import cicert.p12 -P "$P12_PASS" -A -t cert -f pkcs12 -k "$KEYCHAIN_PATH"
+# security list-keychain -d user -s "$KEYCHAIN_PATH"
 
 # Setup build tools
 # export PATH="$PATH:~/.dotnet/tools"
@@ -58,7 +58,7 @@ security list-keychain -d user -s "$KEYCHAIN_PATH"
 # fi
 
 # Build iOS
-cd "$PRJ_DIR" || exit 1
+# cd "$PRJ_DIR" || exit 1
 
 CSPROJ_DIR=$(dirname "$CSPROJ_PATH")
 CSPROJ_FILENAME=$(basename "$CSPROJ_PATH")
