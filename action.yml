@@ -30,7 +30,7 @@ runs:
   steps:
     - run: ${{ github.action_path }}/build-ios.sh
       env:
-          CSPROJ_PATH: ${{ inputs.csproj_path }}
+          CSPROJ_PATH: ${{ github.workspace }}/${{ inputs.csproj_path }}
           MOBILEPROVISION: ${{ inputs.mobileprovision }}
           CERT_P12: ${{ inputs.cert_p12 }}
           P12_PASS: ${{ inputs.p12_pass }}
