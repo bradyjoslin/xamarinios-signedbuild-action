@@ -13,9 +13,6 @@ inputs:
   p12_pass:
     description: 'Password used when exporting p12 distribution cert from keychain'
     required: true
-  keychain_pass:
-    description: 'Generate a random password used to create a keychain on the runner'
-    required: true
   configuration:
     description: 'Build configuration'
     required: false
@@ -37,7 +34,6 @@ runs:
           MOBILEPROVISION: ${{ inputs.mobileprovision }}
           CERT_P12: ${{ inputs.cert_p12 }}
           P12_PASS: ${{ inputs.p12_pass }}
-          KEYCHAIN_PASS: ${{ inputs.keychain_pass }}
           CONFIGURATION: ${{ inputs.configuration }}
           MONO_VERSION: ${{ inputs.mono_version }}
           XAMARIN_IOS_VERSION: ${{ inputs.xamarin_ios_version }}
