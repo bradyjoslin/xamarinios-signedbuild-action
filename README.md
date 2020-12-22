@@ -24,7 +24,6 @@ jobs:
           mobileprovision: ${{ secrets.MOBILEPROVISION }}
           cert_p12: ${{ secrets.CERT_P12 }}
           p12_pass: ${{ secrets.P12_PASS }}
-          keychain_pass: ${{ secrets.KEYCHAIN_PASS }}
           configuration: 'Release'
           mono_version: 'preview'
           xamarin_ios_version: 'preview'
@@ -42,7 +41,6 @@ jobs:
 | mobileprovision     | Base64 representation of mobile provisioning file                                 | Y                     |
 | cert_p12            | Base64 representation p12 distribution cert                                       | Y                     |
 | p12_pass            | Password used when exporting p12 distribution cert from keychain                  | Y                     |
-| keychain_pass       | Generate a random password used to create a keychain on the runner                | Y                     |
 | configuration       | Build configuration                                                               | N - Default `Release` |
 | mono_version        | Version of mono to use for build. `stable`, `preview` or url to mono pkg          | N - Default `stable`  |
 | xamarin_ios_version | Version of Xamarin.iOS to use for build. `stable`, `preview` or url to mono pkg   | N - Default `stable`  |
