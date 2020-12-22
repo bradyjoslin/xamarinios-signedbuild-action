@@ -70,8 +70,6 @@ then
     CONFIGURATION=Release
 fi
 
-echo "csproj $CSPROJ_DIR"
-
 cd "$CSPROJ_DIR" || exit 1
 msbuild "$CSPROJ_FILENAME" /verbosity:normal /t:Rebuild /p:Platform=iPhone /p:Configuration="$CONFIGURATION" /p:BuildIpa=true
 
