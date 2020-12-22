@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: bradyjoslin/xamarinios-signedbuild-action@main
         with:
-          csproj_path: ${{ github.workspace }}/src/sample.iOS/sample.iOS.csproj
+          csproj_path: src/sample.iOS/sample.iOS.csproj
           mobileprovision: ${{ secrets.MOBILEPROVISION }}
           cert_p12: ${{ secrets.CERT_P12 }}
           p12_pass: ${{ secrets.P12_PASS }}
