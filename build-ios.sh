@@ -57,8 +57,6 @@ else
 fi
 
 # Build iOS
-cd "$PRJ_DIR" || exit 1
-
 CSPROJ_DIR=$(dirname "$CSPROJ_PATH")
 CSPROJ_FILENAME=$(basename "$CSPROJ_PATH")
 
