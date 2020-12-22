@@ -18,7 +18,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: bradyjoslin/xamarinios-signedbuild-action@main
+      - uses: bradyjoslin/xamarinios-signedbuild-action@v1
         with:
           csproj_path: src/sample.iOS/sample.iOS.csproj
           mobileprovision: ${{ secrets.MOBILEPROVISION }}
