@@ -35,15 +35,15 @@ jobs:
 
 ## Inputs
 
-| input               | value                                                                             | required?             |
-| ------------------- | --------------------------------------------------------------------------------- | --------------------- |
-| csproj_path         | Path to csproj file                                                               | Y                     |
-| mobileprovision     | Base64 representation of mobile provisioning file                                 | Y                     |
-| cert_p12            | Base64 representation p12 distribution cert                                       | Y                     |
-| p12_pass            | Password used when exporting p12 distribution cert from keychain                  | Y                     |
-| configuration       | Build configuration                                                               | N - Default `Release` |
-| mono_version        | Version of mono to use for build. `stable`, `preview` or url to mono pkg          | N - Default `stable`  |
-| xamarin_ios_version | Version of Xamarin.iOS to use for build. `stable`, `preview` or url to mono pkg   | N - Default `stable`  |
+| input               | value                                                                        | required?             |
+| ------------------- | ---------------------------------------------------------------------------- | --------------------- |
+| csproj_path         | Path to csproj file                                                          | Y                     |
+| mobileprovision     | Base64 representation of mobile provisioning file                            | Y                     |
+| cert_p12            | Base64 representation p12 distribution cert                                  | Y                     |
+| p12_pass            | Password used when exporting p12 distribution cert from keychain             | Y                     |
+| configuration       | Build configuration                                                          | N - Default `Release` |
+| mono_version        | Version of mono to use for build. `stable`, `preview` or url to pkg.         | N - Default `stable`  |
+| xamarin_ios_version | Version of Xamarin.iOS to use for build. `stable`, `preview` or url to pkg.  | N - Default `stable`  |
 
 ##  FAQ
 
