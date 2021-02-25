@@ -1,5 +1,8 @@
 name: 'Xamarin.iOS Signed Build'
 description: 'Build and Sign Xamarin.iOS Project'
+branding:
+  icon: 'activity'
+  color: 'white'
 inputs:
   csproj_path:
     description: 'Path to csproj file'
