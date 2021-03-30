@@ -28,6 +28,10 @@ inputs:
     description: 'Version of Xamarin.iOS to use for build'
     required: false
     default: 'stable'
+  nuget_restore_dir:
+    description: 'Directory from which to run nuget restore. Defaults to one level above the csproj_path value.'
+    required: false
+    default: ''
 runs:
   using: "composite"
   steps:
@@ -40,4 +44,5 @@ runs:
           CONFIGURATION: ${{ inputs.configuration }}
           MONO_VERSION: ${{ inputs.mono_version }}
           XAMARIN_IOS_VERSION: ${{ inputs.xamarin_ios_version }}
+          NUGET_RESTORE_DIR: ${{ inputs.nuget_restore_dir }}
       shell: bash

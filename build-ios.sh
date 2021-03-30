@@ -60,7 +60,8 @@ fi
 CSPROJ_DIR=$(dirname "$CSPROJ_PATH")
 CSPROJ_FILENAME=$(basename "$CSPROJ_PATH")
 
-cd "$CSPROJ_DIR" && cd ../ || exit 1
+NUGET_RESTORE_DIR="${SLN_DIR:-"$CSPROJ_DIR/.."}"
+cd "$NUGET_RESTORE_DIR" || exit 1
 nuget restore
 
 if [ -z "$CONFIGURATION" ]
